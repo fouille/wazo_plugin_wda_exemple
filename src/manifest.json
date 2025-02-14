@@ -1,0 +1,22 @@
+{
+    "manifestVersion": "0.1",
+    "version": "1.0.0",
+    "id": "wda-incoming-call-modal",
+    "packageName": "io.wazo.wda.incoming-call-modal",
+    "productType": "app",
+    "name" : {
+      "short": "Example - Incoming Call Modal",
+      "full": "Example - Incoming Call Modal"
+    },
+    "developer": {
+      "name": "Wazo Inc"
+    },
+    "description": {
+      "short": "Example on how to implement: Incoming Call Modal",
+      "full": "Example on how to implement: Incoming Call Modal"
+    },
+    "icons": {
+      "color": "https://avatars.githubusercontent.com/u/68688703?s=200&v=4"
+    },
+    "backgroundScript": "./openurl.js"
+  }
