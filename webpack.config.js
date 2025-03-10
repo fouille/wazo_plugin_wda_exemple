@@ -32,6 +32,10 @@ const config = {
             chunks: ["app"],
             inject: "body"
         }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "src", "app", "router.html"),
+            filename: "app/router.html",
+        }),
         new CopyWebpackPlugin({
             patterns: [
                 { from: './src/manifest.json', to: 'manifest.json' },
