@@ -11,7 +11,10 @@ const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader
 
 const config = {
     performance: {},
-    entry: { },
+    devtool: "source-map",
+    entry: {
+        app: [path.resolve(__dirname, "src", "app", "index.js")]
+      },
     devServer: {
         host: 'localhost',
         port: "3000",
@@ -23,10 +26,11 @@ const config = {
         hot: true
     },
     plugins: [
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jquery: "jQuery",
-            "window.jQuery": "jquery"
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "src", "app", "index.html"),
+            filename: "app/index.html",
+            chunks: ["app"],
+            inject: "body"
         }),
         new CopyWebpackPlugin({
             patterns: [
@@ -34,7 +38,6 @@ const config = {
                 { from: './src/openurl.js', to: 'openurl.js' }
             ]
         })
-        
     ],
     module: {
         rules: [

@@ -1,12 +1,11 @@
 {
   "name": "wazo_plugin_wda_exemple",
   "version": "1.0.0",
-  "main": "index.js",
+
   "scripts": {
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
-    "dev": "webpack-dev-server --config webpack.config.js --mode=development",
-    "dev:opera": "webpack-dev-server --config opera.config.js --mode=development"
+    "dev": "npx webpack serve --mode=development --allowed-hosts webinaires.wazo"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +19,9 @@
     "webpack": "^5.98.0",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0"
+  },
+  "dependencies": {
+    "babel-loader": "^10.0.0",
+    "D": "^1.0.0"
   }
 }
