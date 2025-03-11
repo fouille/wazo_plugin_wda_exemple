@@ -33,8 +33,8 @@ const config = {
             inject: "body"
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "src", "app", "router.html"),
-            filename: "app/router.html",
+            template: path.resolve(__dirname, "src", "routeur", "index.html"),
+            filename: "routeur/index.html",
         }),
         new CopyWebpackPlugin({
             patterns: [
