@@ -1,7 +1,6 @@
 {
   "name": "wazo_plugin_wda_exemple",
   "version": "1.0.0",
-
   "scripts": {
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",

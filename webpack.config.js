@@ -13,7 +13,8 @@ const config = {
     performance: {},
     devtool: "source-map",
     entry: {
-        app: [path.resolve(__dirname, "src", "app", "index.js")]
+        app: [path.resolve(__dirname, "src", "app", "index.js")],
+        runapp: [path.resolve(__dirname, "src", "runapp", "index.js")]
       },
     devServer: {
         host: 'localhost',
@@ -35,6 +36,12 @@ const config = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "src", "routeur", "index.html"),
             filename: "routeur/index.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "src", "runapp", "index.html"),
+            filename: "runapp/index.html",
+            chunks: ["runapp"],
+            inject: "body"
         }),
         new CopyWebpackPlugin({
             patterns: [
