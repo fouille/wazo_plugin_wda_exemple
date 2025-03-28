@@ -46,6 +46,8 @@ app.onBackgroundMessage = msg => {
   }
 
 app.onCallAnswered = (call) => {
+    console.log(call);
+    
     const storageApp = localStorage.getItem('wazo_plugin_runapp');
     // const url = `hammerspoon://${storageApp}?number=${call.number}`;
     
